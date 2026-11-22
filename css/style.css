@@ -1,0 +1,97 @@
+/* 日々の余白 — simple Japanese-inspired personal profile */
+:root {
+  --paper: #f5f1e8;
+  --paper-light: #fbf9f4;
+  --ink: #292a28;
+  --muted: #777265;
+  --indigo: #344b63;
+  --line: #dcd5c8;
+  --gold: #a18a60;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0; background: var(--paper); color: var(--ink);
+  font-family: "Noto Sans JP", sans-serif; line-height: 1.9;
+}
+a { color: inherit; text-decoration: none; }
+.site-header {
+  max-width: 1120px; margin: auto; padding: 25px 5vw;
+  display: flex; align-items: center; justify-content: space-between;
+  border-bottom: 1px solid var(--line);
+}
+.brand, .footer-brand { font-family: "Noto Serif JP", serif; font-size: 1.12rem; letter-spacing: .12em; }
+.brand span { display: block; color: var(--muted); font: 9px/1.5 "Noto Sans JP", sans-serif; letter-spacing: .2em; }
+nav { display: flex; gap: clamp(15px, 3vw, 34px); }
+nav a, .eyebrow, .number, .card-kana { font-size: .68rem; letter-spacing: .16em; color: var(--muted); }
+nav a:hover, .text-link:hover, .social-link:hover { color: var(--gold); }
+.hero {
+  max-width: 1120px; min-height: 570px; margin: auto; padding: 80px 5vw 90px;
+  display: grid; grid-template-columns: 1fr 1.05fr; align-items: center; gap: 6vw; position: relative;
+}
+.hero-copy { position: relative; z-index: 1; }
+.eyebrow { color: var(--gold); margin-bottom: 22px; }
+h1, h2, h3, .intro { font-family: "Noto Serif JP", serif; font-weight: 400; }
+h1 { font-size: clamp(2.4rem, 5vw, 4.2rem); line-height: 1.55; letter-spacing: .08em; margin: 0 0 20px; }
+.lead { color: var(--muted); line-height: 2.2; }
+.text-link { display: inline-block; margin-top: 24px; padding-bottom: 5px; border-bottom: 1px solid var(--gold); font-size: .82rem; letter-spacing: .08em; }
+.text-link span { color: var(--gold); margin-left: 18px; }
+.hero-art {
+  height: 370px; position: relative; overflow: hidden; background: #e8e2d5;
+  background-image: radial-gradient(#c9c0b0 .65px, transparent .65px); background-size: 5px 5px;
+}
+.sun { position: absolute; width: 145px; height: 145px; border-radius: 50%; background: #b9a47b; top: 48px; right: 20%; opacity: .85; }
+.mountain { position: absolute; bottom: 75px; width: 0; height: 0; border-left: 230px solid transparent; border-right: 230px solid transparent; }
+.mountain-back { border-bottom: 205px solid #9ca6a0; right: -25px; }
+.mountain-front { border-bottom: 155px solid var(--indigo); left: -95px; bottom: 40px; }
+.water { position: absolute; left: 0; right: 0; bottom: 0; height: 95px; background: #c5c9bd; opacity: .9; }
+.art-caption { position: absolute; right: 18px; bottom: 18px; z-index: 2; color: #34413f; font: 11px "Noto Serif JP", serif; letter-spacing: .15em; }
+.vertical-note { position: absolute; right: 1%; top: 43%; writing-mode: vertical-rl; color: var(--muted); font: 11px "Noto Serif JP", serif; letter-spacing: .2em; }
+.section { max-width: 1000px; margin: auto; padding: 95px 5vw; border-top: 1px solid var(--line); display: grid; grid-template-columns: .7fr 1.3fr; gap: 7vw; }
+.section-heading h2 { font-size: 1.9rem; letter-spacing: .12em; margin: 10px 0; }
+.number { color: var(--gold); }
+.heading-note, .small-note { color: var(--muted); font-size: .82rem; }
+.section-body { max-width: 610px; }
+.section-body p { margin-top: 0; }
+.intro { font-size: 1.25rem; line-height: 2; }
+.interests { display: block; }
+.interests .section-heading { margin-bottom: 35px; }
+.interest-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+.interest-card { min-width: 0; }
+.card-art { height: 145px; display: grid; place-items: center; overflow: hidden; position: relative; }
+.card-art span { font: 3rem "Noto Serif JP", serif; color: rgba(255,255,255,.82); position: relative; z-index: 1; }
+.art-shrine { background: linear-gradient(145deg, #a7afa2, #455c55); }
+.art-washi { background: repeating-linear-gradient(135deg, #e5ddcd, #e5ddcd 8px, #d8cdbb 9px, #d8cdbb 10px); }
+.art-washi span { color: #867b67; }
+.art-tech { background: linear-gradient(145deg, #6b7782, #293746); }
+.art-nature { background: linear-gradient(145deg, #b9b89c, #607b70); }
+.card-kana { margin: 18px 0 3px; color: var(--gold); font-size: .6rem; }
+.interest-card h3 { font-size: 1.05rem; margin: 0 0 8px; }
+.interest-card p:last-child { color: var(--muted); font-size: .78rem; line-height: 1.9; }
+.links .section-body > p { color: var(--muted); }
+.social-link { display: flex; align-items: center; gap: 17px; max-width: 420px; padding: 18px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); transition: color .2s; }
+.social-mark { font-size: 1.5rem; width: 35px; text-align: center; }
+.social-link strong, .social-link small { display: block; }
+.social-link strong { font-weight: 500; }
+.social-link small { color: var(--muted); font-size: .75rem; }
+.arrow { margin-left: auto; color: var(--gold); }
+.site-footer { text-align: center; padding: 55px 20px 35px; background: #eae4d8; }
+.footer-brand { font-size: 1.3rem; }
+.site-footer p { color: var(--muted); font: .8rem "Noto Serif JP", serif; }
+.site-footer small { color: var(--muted); font-size: .62rem; letter-spacing: .15em; }
+@media (max-width: 700px) {
+  .site-header { align-items: flex-start; gap: 15px; }
+  nav { gap: 12px; padding-top: 7px; }
+  nav a { font-size: .58rem; }
+  .hero { display: flex; flex-direction: column; align-items: stretch; padding-top: 60px; gap: 35px; }
+  .hero-art { height: 260px; }
+  .vertical-note { display: none; }
+  .section { grid-template-columns: 1fr; gap: 25px; padding-top: 65px; padding-bottom: 65px; }
+  .interest-grid { grid-template-columns: repeat(2, 1fr); gap: 25px 14px; }
+  .card-art { height: 125px; }
+}
+@media (max-width: 380px) {
+  .brand { font-size: .98rem; }
+  nav { gap: 8px; }
+  nav a { letter-spacing: .08em; }
+}
